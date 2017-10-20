@@ -8,6 +8,12 @@
     <artifactId>springboot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <!-- 主要依赖库的版本定义 -->
+        <slf4j.version>1.7.2</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+
+    </properties>
     <!-- springboot 必须引入的 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -19,6 +25,47 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+
+        <!-- LOGGING begin -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- common-logging 实际调用slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- java.util.logging 实际调用slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.lazyluke</groupId>
+            <artifactId>log4jdbc-remix</artifactId>
+            <version>0.2.7</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- LOGGING end -->
+
     </dependencies>
 
     <!-- 配置一个启动的类，这个在打包后会从这个类启动 -->
