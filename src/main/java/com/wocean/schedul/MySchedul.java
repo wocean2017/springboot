@@ -6,6 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
+/**
+ *  @Auth hywang
+ *  @Email hywang2017@qq.com
+ *
+ */
 @Configuration
 @EnableScheduling
 public class MySchedul {

@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *  全局的异常类
+ *  @Auth hywang
+ *  @Email hywang2017@qq.com
+ * 全局的异常类
  */
 
 @RestController
@@ -16,6 +18,6 @@ public class ExceptionHandlerAdvice {
     @ExceptionHandler(Exception.class)
     public String handleException(Exception e) {
         e.printStackTrace();
-        return "出现异常";
+        return "出现异常"+e.getMessage();
     }
 }

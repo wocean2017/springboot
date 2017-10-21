@@ -4,3 +4,6 @@ springboot
 2.ExceptionHandlerAdvice  全局异常处理
 3.引入log4j
 4.MySchedul 定时任务
+5.UserInfoController 整合mybatis
+
+

@@ -12,9 +12,10 @@
         <!-- 主要依赖库的版本定义 -->
         <slf4j.version>1.7.2</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
-
+        <mybatis.version>1.2.0</mybatis.version>
+        <mysq.version>5.1.39</mysq.version>
     </properties>
-    <!-- springboot 必须引入的 -->
+    <!-- springboot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -65,6 +66,20 @@
             <scope>runtime</scope>
         </dependency>
         <!-- LOGGING end -->
+
+
+        <!-- Spring Boot Mybatis 依赖 -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <!-- MySQL 连接驱动依赖 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysq.version}</version>
+        </dependency>
 
     </dependencies>
 
