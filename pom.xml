@@ -13,7 +13,7 @@
         <slf4j.version>1.7.2</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
         <mybatis.version>1.2.0</mybatis.version>
-        <mysq.version>5.1.39</mysq.version>
+        <mysq.version>8.0.16</mysq.version>
     </properties>
     <!-- springboot -->
     <parent>
